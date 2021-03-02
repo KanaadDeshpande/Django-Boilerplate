@@ -10,4 +10,6 @@ if settings.DEBUG:
     import debug_toolbar
     urlpatterns += [
         path('__debug__/', include(debug_toolbar.urls)),
+        path('jet/', include('jet.urls', 'jet')), 
+        path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     ]
